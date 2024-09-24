@@ -14,4 +14,4 @@ For Usage
 How Multiprocessing Works
 - This script uses Python's multiprocessing library to run multiple processes concurrently. Instead of scraping one webpage at a time, the script divides the list of URLs among multiple worker processes. This allows for significantly faster scraping, especially when dealing with a large number of URLs.
 
-- For example, if you have 4 CPU cores, the script can scrape 4 pages simultaneously. You can adjust the number of processes based on your machine's CPU capacity by modifying the processes parameter in the next script
+- For example, if you have 4 CPU cores, the script can scrape 4 pages simultaneously. You can adjust the number of processes based on your machine's CPU capacity by modifying the processes parameter in the script "AdjustMultiprocessing.py"
