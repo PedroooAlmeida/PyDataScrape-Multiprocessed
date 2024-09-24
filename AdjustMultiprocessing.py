@@ -1,14 +1,27 @@
-# git clone https://github.com/yourusername/your-repository-name.git
-# cd your-repository-name
+import requests
+from bs4 import BeautifulSoup
+from multiprocessing import Pool, cpu_count # For option 2
+import pandas as pd
+import sys
 
-# Here's the line for adjusting the multiprocessing to your own device
+# Here are the lines for adjusting the multiprocessing to your own device:
 
-with Pool(processes=4) as pool: # Adjust the number of processes here
+# OPTION 1: 
 
+with Pool(processes=4) as pool: # Manually adjust the number of processes here
 # This line creates a pool with 4 worker processes. These workers will run independently, each handling a portion of the scraping task.
+ 
+# --------------------------------------------------------------------------------------------------------------------------------------
+ 
+# OPTION 2: 
 
-results = pool.map(fetch_data, urls)
+# Get the number of CPU cores and use that value in the Pool() function
 
-# The map() function distributes the urls list across the 4 worker processes, assigning each URL to one of the workers. 
-# Each worker runs the fetch_data() function on its assigned URL. 
- #Once all URLs are processed, map() collects and returns the results from all workers.
+available_cores = cpu_count()
+
+num_processes = available_cores
+
+with Pool(processes=num_processes) as pool:
+
+
+
