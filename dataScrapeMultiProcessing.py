@@ -45,8 +45,10 @@ def scrape_urls(urls):
     Returns:
     list: List of dictionaries containing scraped data.
     """
-    # Use Pool to run multiple processes (the number of processes will depend on CPU cores)
-    with Pool(processes=4) as pool:  # Adjust the 'processes' number according to your system
+    # Use Pool to run multiple processes (the number of processes will depend on CPU cores)   
+    # Adjust the 'processes' number according to your system, in this case our value is "4" 
+    # OR use multiprocessing.cpu_count() to get the number of logical CPU cores on your system and set that as the number of processes.
+    with Pool(processes=4) as pool:  
         results = pool.map(fetch_data, urls)  # Map the fetch_data function to the list of URLs
     return results
 
