@@ -8,8 +8,10 @@ import sys
 
 # OPTION 1: 
 
-with Pool(processes=4) as pool: # Manually adjust the number of processes here
 # This line creates a pool with 4 worker processes. These workers will run independently, each handling a portion of the scraping task.
+
+with Pool(processes=4) as pool: # Manually adjust the number of processes here
+
  
 # --------------------------------------------------------------------------------------------------------------------------------------
  
