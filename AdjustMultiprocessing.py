@@ -12,6 +12,10 @@ import sys
 
 with Pool(processes=4) as pool: # Manually adjust the number of processes here
 
+ # I *really* put my 11 core CPU MacBook to work with Pool(processes=12), but keep in mind your computer will just start context switching 
+ # if you try to push it past the amount of cores your CPU has. 
+ # This won't provide a significant performance boost compared to using 11 processes. 
+ # In fact, it could introduce a slight overhead because the CPU needs to manage the scheduling of that additional process.
  
 # --------------------------------------------------------------------------------------------------------------------------------------
  
