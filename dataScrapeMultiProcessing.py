@@ -65,12 +65,12 @@ if __name__ == "__main__":
 
     # Start scraping the URLs using multiprocessing
     print("Starting web scraping...")
-    scraped_data = scrape_urls(urls)
+    scraped_data = scrape_urls(urls) 
     
     # Convert the results into a Pandas DataFrame
     df = pd.DataFrame(scraped_data)
     
-    # Export the DataFrame to a CSV file
+    # Export the DataFrame to a CSV file, easier to read and manipulate with csv methods too
     df.to_csv('scraped_data.csv', index=False)
 
     # Print a success message and show the DataFrame summary
