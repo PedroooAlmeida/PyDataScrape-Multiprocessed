@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 from multiprocessing import Pool
 import pandas as pd
 
-# Function to fetch the content of a webpage and parse it using BeautifulSoup
 def fetch_data(url):
     """
     Fetch HTML content from the given URL and parse it using BeautifulSoup.
