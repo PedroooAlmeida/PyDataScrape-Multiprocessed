@@ -33,7 +33,6 @@ def fetch_data(url):
         print(f"Error fetching {url}: {e}")
         return {'url': url, 'title': 'N/A', 'content': 'N/A'}
 
-# Function to run the multiprocessing pool
 def scrape_urls(urls):
     """
     Scrape multiple URLs concurrently using multiprocessing.
