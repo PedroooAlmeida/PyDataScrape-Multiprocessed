@@ -50,7 +50,6 @@ def scrape_urls(urls):
         results = pool.map(fetch_data, urls)  # Map the fetch_data function to the list of URLs
     return results
 
-# Main function to define the URLs to scrape and process the scraped data
 if __name__ == "__main__":
     # List of URLs to scrape (replace with actual URLs you want to scrape)
     urls = [
