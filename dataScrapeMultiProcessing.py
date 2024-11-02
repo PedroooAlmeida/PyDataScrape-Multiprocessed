@@ -19,7 +19,7 @@ def fetch_data(url):
         response.raise_for_status()  # Raise an error for failed requests
         
         # Parse the page content using BeautifulSoup
-        soup = BeautifulSoup(response.text, 'lxml')
+        soup = BeautifulSoup(response.text,'lxml')
 
         # Example: Extract specific information, e.g., title and some content
         title = soup.find('title').text.strip() if soup.find('title') else 'N/A'
